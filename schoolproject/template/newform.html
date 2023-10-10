@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form</title>
+</head>
+<body style="background-color:#D5DBDB;">
+<h2 style="font-family:georgia;padding:0px 50px;"><u>Form</u></h2>
+<form action="form" method="POST" style="padding:0px 50px;">
+<!--    {% csrf_token %}-->
+<!--    <label>Name:</label>-->
+<!--    <input type="text" name="Name" placeholder="Enter your name"><br>-->
+<!--    <br>-->
+<!--    <label for="birthday">DOB:</label>-->
+<!--    <input type="date" id="birthday" name="birthday"><br>-->
+<!--    <br>-->
+<!--    <label>Age:</label>-->
+<!--    <input type="text" name="age" placeholder="Enter your age"><br>-->
+<!--    <br>-->
+<!--    <label>Gender:</label>-->
+<!--    <input type="radio" id="female" name="Gender" value="Female">-->
+<!--    <label for="female">Female</label>-->
+<!--    <input type="radio" id="male" name="Gender" value="Male">-->
+<!--    <label for="male">Male</label>-->
+<!--    <input type="radio" id="transgender" name="Gender" value="Transgender">-->
+<!--    <label for="transgender">Transgender</label>-->
+<!--    <br>-->
+<!--    <br>-->
+<!--    <label>Phone number:</label>-->
+<!--    <input type="tel" name="phone" maxlength="10" placeholder="Enter phone number"><br>-->
+<!--    <br>-->
+<!--    <label>Email:</label>-->
+<!--    <input type="email" name="email" placeholder="Enter your email address"><br>-->
+<!--    <br>-->
+<!--    <label>Address:</label>-->
+<!--    <input type="text" name="address" placeholder="Enter your address"><br>-->
+<!--    <br>-->
+<!--    <label for="dept">Choose department:</label>-->
+<!--    <select id="dept" name="dept">-->
+<!--    <option value="commerce">Commerce</option>-->
+<!--    <option value="english">English literature</option>-->
+<!--    <option value="computer science">Computer science</option>-->
+<!--    <option value="biology science">Biology science</option>-->
+<!--    <option value="humanities">Humanities</option>-->
+<!--    </select><br>-->
+<!--    <br>-->
+<!--    <label for="course">Choose course:</label>-->
+<!--    <select id="course" name="course">-->
+<!--        <option value="bcom">B.com</option>-->
+<!--        <option value="baenglish">BA English</option>-->
+
+<!--        <option value="bba">BBA</option>-->
+<!--        <option value="bscm">Bsc Maths</option>-->
+<!--        <option value="bscstat">Bsc Statistics</option>-->
+<!--        <option value="btech">B.tech</option>-->
+<!--        <option value="cs">CS</option>-->
+
+<!--    </select><br>-->
+<!--    <br>-->
+<!--    <label for="purpose">Purpose:</label>-->
+<!--    <select id="purpose" name="purpose">-->
+<!--    <option value="enquiry">For enquiry</option>-->
+<!--    <option value="registration">For registration</option>-->
+
+<!--    </select><br>-->
+<!--    <br>-->
+<!--    <label>Materials provide:</label><br>-->
+<!--    <input type="checkbox" id="pen" name="pen" value="pen">-->
+<!--    <label for="pen">Pen</label><br>-->
+<!--    <input type="checkbox" id="Exam paper" name="Exam paper" value="Exam paper">-->
+<!--    <label for="Exam paper">Exam paper</label><br>-->
+<!--    <input type="checkbox" id="Notebook" name="Notebook" value="Notebook">-->
+<!--    <label for="Notebook">Notebook</label><br>-->
+<!--    <input type="submit">-->
+    {% csrf_token %}
+    {{ form1.as_p }}
+    <button type="submit">Register</button>
+</form>
+{% for msg in messages %}
+<h2>{{msg}}</h2>
+{% endfor %}
+<br>
+<a href="/" style="padding:0px 50px;"><button>Back to home page</button></a>
+</body>
+</html>
